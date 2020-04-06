@@ -1,2 +1,13 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.小程序的数据绑定 {{}}-> Muxtache -->
+<view> hello {{name}}</view>
+<!-- 2.列表渲染 wx:for  小程序内部生成item-->
+<view wx:for="{{students}}">{{item.name}}--{{item.age}}</view>
+<!-- 3.事件监听  绑定tap轻触事件 -->
+<view>当前计数:{{counter}}</view>
+<button size='mini' bindtap='handbtnadd'>+</button>
+<button size='mini' bindtap='handbtncut'>-</button>
+<!-- 设置属性open-type 获取用户信息打开方式 绑定函数  -->
+<button open-type='getUserInfo' bindgetuserinfo="handleGetinfo" >获取授权</button>
+<!-- 展示用户信息 组件 开放能力 看type属性值 -->
+<open-data type="userNickName"></open-data>

@@ -1,2 +1,4 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view>哈哈我是about</view>
+<!-- 展示从服务器获取的数据 -->
+<view wx:for="{{list}}">{{item}}</view>

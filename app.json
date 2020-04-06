@@ -3,5 +3,28 @@
     "pages/home/home",
     "pages/about/about"
   ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff66ff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "全局配置",
+    "backgroundColor": "#ff66ff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor":"#ff66ff",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "Home",
+      "iconPath": "assets/tabbar/16.png",
+      "selectedIconPath": "assets/tabbar/1.png"
+    },
+    {
+      "pagePath": "pages/about/about",
+      "text": "About",
+      "iconPath": "assets/tabbar/16.png",
+      "selectedIconPath": "assets/tabbar/1.png"
+    }]
+  },
   "sitemapLocation": "sitemap32.json"
 }
