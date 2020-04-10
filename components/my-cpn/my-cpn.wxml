@@ -1,0 +1,15 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<text>components/my-cpn/my-cpn.wxml</text>
+<view class='box'>hahah</view>
+<cpn/>
+<!-- 组件页面之间传值 -->
+<!-- 页面向自定义组件传值/样式 -->
+<view class='wrap titleclass'>{{title}}</view>
+<!-- 组件向页面传递  自定义事件 -->
+<!-- 组件按钮 控制 页面的数据 并通过triggerEvent向页面发送事件名、数据 -->
+<button bindtap='handeladd'>+1</button> 
+<view class='outer'>
+<view class='item'>哈哈</view>
+<view class='item'>呵呵</view>
+<view class='item'>啦啦</view>
+</view>

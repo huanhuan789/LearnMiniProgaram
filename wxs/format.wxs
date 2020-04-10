@@ -1,0 +1,15 @@
+// 事件格式化
+function priceFormat(price,number){
+  // 判断前面有没有值，如果有值就用这个值,没值就为2
+  var number=number||2;
+  return price.toFixed(number)
+}
+// 时间格式化
+function timeFormat(time,format){
+  return '2019-5-21'
+
+}
+module.exports={
+  priceFormat:priceFormat,
+  timeFormat: timeFormat
+}

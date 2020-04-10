@@ -7,7 +7,15 @@ Page({
   data: {
 
   },
-
+  handleIput(event){
+console.log('获取用户输入文本',event)
+  },
+  handleFocus(event){
+    console.log('获取获取焦点', event)
+  },
+  handleBlur(event){
+    console.log('只去焦点', event)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

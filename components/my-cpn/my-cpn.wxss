@@ -1,0 +1,12 @@
+/* components/my-cpn/my-cpn.wxss */
+.box{
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.outer{
+  display: flex
+}
+.item{
+  flex:1;
+}

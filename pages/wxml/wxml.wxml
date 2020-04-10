@@ -1,0 +1,55 @@
+<!--pages/wxml语法/wxml.wxml-->
+<text>pages/wxml语法/wxml.wxml</text>
+<!-- ------Mustache ------>
+<view>{{nowTime}}</view>
+<!-- 通过{{}} 改变量  在{{}}绑定属性判断是否有 在jsdata中写变量-->
+<!-- 点击按钮 切换颜色 -->
+<button bindtap='handleSwitchColor'>切换颜色</button>
+<view class='box {{isActive?"active":""}}'>哈哈哈</view>
+<!-- ------条件判断------ -->
+<!-- true 渲染  false不渲染  -->
+<button bindtap='handleisShow'>是否渲染</button>
+<view wx:if='{{isShow}}'>哈哈哈哈</view>
+<!-- wx：elif/wx:else  -->
+<!-- 点击按钮 分数递增 显示变化-->
+<button bindtap='handleScore'>增加10分</button>
+<view>{{score}}</view>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:elif="{{score>=60}}">及格</view>
+<view wx:else>不及格</view>
+<!-- -----列表渲染 -->
+<!-- wx:for的基础  
+遍历数组,自动生成item 数组的每项  index数组每项的索引值 -->
+<view wx:for="{{['a','s','b']}}">{{item}}</view>
+<!-- 遍历字符串 -->
+<view wx:for="hahaha">{{item}}{{index}}</view>
+<!-- 遍历{{数字}} -->
+<view wx:for="{{10}}">{{item}}{{index}}</view>
+<!-- ------item index起名字 -->
+<view wx:for="{{movies}}" wx:for-item="movies" wx:for="i">{{movies}}{{i}}</view>
+<!-- 二维数组遍历  先遍历外层数组项,在遍历内层数组项 起名字 好区分-->
+<block wx:for="{{nums}}" wx:for-item="inner">
+<block wx:for="{{inner}}">
+{{item}}
+</block>
+</block>
+<!-- key的作用 提高性能,高效的更新虚拟DOM,给每个节点做唯一标识-->
+<view wx:for="{{keyArray}}" wx:key="unique">{{item.id}}</view>
+
+<!-- ---------------抽离模板，可通过import引入模板  不能在模板1中导入模板2 在页面中使用2 -->
+<!-- ------------模板语法template -->
+<!-- <template name="contentItem">
+<button>{{btnText}}</button>
+<view>{{content}}</view>
+</template> -->
+<!-- 绝对路径 -->
+<!-- <import src="/pages/template.wxml"> -->
+<!-- 相对路径 -->
+ <import src="../../pages/template.wxml"/>
+
+<!-- 多次使用模板 is后 name data后内容 data="{{key1:value1,key2:value2}}"" -->
+
+<template is="contentItem" data="{{btnText:'按钮',content:'哈哈哈'}}"/>
+<template is="contentItem" data="{{btnText:'警告',content:'唉呀妈呀'}}"/>
+<template is="contentItem" data="{{btnText:'选择',content:'杠杠的'}}"/>

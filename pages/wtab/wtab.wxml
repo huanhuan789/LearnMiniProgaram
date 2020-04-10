@@ -1,0 +1,4 @@
+<!--pages/wtab/wtab.wxml-->
+<text>pages/wtab/wtab.wxml</text>
+<w-tab tabtitle="{{['衣服','裤子','鞋子']}}"
+bind:tabtab="handletab"/>

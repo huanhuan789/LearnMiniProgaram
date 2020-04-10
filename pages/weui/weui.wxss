@@ -1,0 +1,3 @@
+/* pages/weui/weui.wxss */
+@import './style/weui-searchbar.wxss';
+@import './style/weui-icon.wxss'

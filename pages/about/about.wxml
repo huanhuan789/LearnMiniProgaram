@@ -1,2 +1,22 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<input/>
+<!-- value:默认值 -->
+<input value='默认值'/>
+<!-- type：决定键盘类型 文本  数字 -->
+<input type='number'/>
+<!-- 绑定事件获取用户输入内容,获取焦点,失去焦点 在js 函数中传入event参数 -->
+<input bindinput='handleIput' bindfocus='handleFocus' bindblur='handleBlur'/>
+<!-- ----------scroll-view ----------->
+<!-- 局部水平滚动 scroll-x -->
+<text>-----水平滚动scroll-x------</text>
+<scroll-view class='contaner1' scroll-x>
+<view wx:for="{{10}}" class='contaner2'>{{item}}</view>
+</scroll-view>
+<!-- 局部垂直滚动 scroll-y 给scroll-view设置高度 -->
+<text>-----垂直滚动scroll-y------</text>
+<scroll-view class='cony' scroll-y>
+<view wx:for="{{10}}" class='cony2'>{{item}}</view>
+</scroll-view>
+<!-- 自定义组件 -->
+<view class='box'>页面样式</view>
+<my-cpn/>

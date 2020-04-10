@@ -1,2 +1,19 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<text></text>
+<!-- 可通过动态数据 是否loading显示 -->
+<button loading='{{isLoading}}'>loading</button>
+<!-- 按钮按下时的样子,通过wxss设置样式 -->
+<button hover-class='press'>hover-class</button>
+<view class='box' hover-class='hoverbox'></view>
+<!-- 1.image 组件可以写成单标签，也可以双标签2.默认有自己的大小320*240 3.行内块级元素 不换行 可设置宽高 -->
+<!-- 本地路径(相对路径、绝对路径)/远程路径 -->
+<image src='../../assets/16.png'></image>
+<image src='/assets/16.png'></image>
+<image src='https://ps.ssl.qhimg.com/sdmt/130_162_100/t013334ebc21bf76d52.webp'></image>
+<text>啊哈哈</text>
+<button bindtap='handchoose'>选中图片</button>
+<image src='{{imagePath}}'></image>
+<!-- bindload 监听图片加载完成  lazy-load 图片的懒加载 -->
+<image wx:for="{{5}}"src='https://ps.ssl.qhimg.com/sdmt/130_162_100/t013334ebc21bf76d52.webp' bindload='handleImageLoad' lazy-load></image>
+<!-- show-menu-by-longpress 长按识别小程序码 -->
+<image src='https://ps.ssl.qhimg.com/sdmt/130_162_100/t013334ebc21bf76d52.webp' show-menu-by-longpress ></image>

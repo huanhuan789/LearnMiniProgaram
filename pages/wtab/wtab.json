@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "w-tab":"/components/w-tab-control/w-tab-control"
+  }
+}

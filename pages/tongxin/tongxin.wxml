@@ -1,0 +1,22 @@
+<!--pages/tongxin/tongxin.wxml-->
+<text>pages/tongxin/tongxin.wxml</text>
+<!-- 给自定义组件传值 -->
+<my-cpn  title="哈哈哈" titleclass="red"></my-cpn>
+<my-cpn title="嘻嘻嘻" titleclass="blue"></my-cpn>
+<my-cpn></my-cpn>
+<!-- 组件向页面传递  自定义事件 -->
+<view>------------------------------------</view>
+<my-cpn bind:increment="handleyemian"></my-cpn>
+<view>计数计数计数{{counter}}</view>
+<!-- 页面直接调用组件修改数据/方法 -->
+<view>-------------------------</view>
+<button bindtap='handleselect'>修改组件内的数据</button>
+<my-sel class="sel-class"/>
+<!--  插槽的使用-->
+<!-- <my-slot> <button>我是插槽</button></my-slot>
+<my-slot> <text>我是插槽的文本</text></my-slot> -->
+<!-- 多个插槽的使用 -->
+<my-slot>
+<button slot="slot2">我是插槽二</button>
+<button slot="slot1">我是插槽一</button>
+</my-slot>

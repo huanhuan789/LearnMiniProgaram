@@ -1,0 +1,10 @@
+<!--components/my-slot/my-slot.wxml-->
+<text>components/my-slot/my-slot.wxml</text>
+<!-- <view>下面是插槽</view>
+<slot></slot>
+<view>上面是插槽</view> -->
+ <!-- 多个插槽的使用  1.根据插槽的name 2.在组件js中加options multipleSlots:true-->
+<view>我是多个插槽的使用</view>
+<slot name="slot1"></slot>  
+<slot name="slot2"></slot>  
+<slot name="slot3"></slot>  

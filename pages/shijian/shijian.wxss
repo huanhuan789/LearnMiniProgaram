@@ -1,0 +1,26 @@
+/* pages/shijian/shijian.wxss */
+.outer{
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+.inner{
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+.box1{
+  width: 100px;
+ height: 100px;
+ background: red;
+}
+.box2{
+  width: 150px;
+ height: 150px;
+ background: blue;
+}
+.box3{
+  width: 200px;
+ height: 200px;
+ background: rgb(255, 0, 157);
+}

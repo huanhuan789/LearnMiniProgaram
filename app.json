@@ -1,7 +1,14 @@
 {
   "pages": [
+      "pages/tongxin/tongxin",
+        "pages/wtab/wtab",
+    "pages/about/about",
+    "pages/shijian/shijian",
+    "pages/wxs/wxs",
     "pages/home/home",
-    "pages/about/about"
+    "pages/weui/weui",
+    "pages/wxml/wxml",
+    "components/cpn1/cpn1"
   ],
   "sitemapLocation": "sitemap32.json"
 }

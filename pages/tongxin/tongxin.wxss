@@ -1,0 +1,7 @@
+/* pages/tongxin/tongxin.wxss */
+.red{
+  color: red;
+}
+.blue{
+  color:blue;
+}

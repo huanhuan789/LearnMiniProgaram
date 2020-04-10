@@ -1,0 +1,26 @@
+<!--pages/shijian/shijian.wxml-->
+<text>pages/shijian/shijian.wxml</text>
+<!-- 事件的注意 Touchcancle在某些特定场景下才会触发 比如来电打断
+tap事件和longpress事件通常只会触发其中一个 -->
+<view bindtap='handleBtnClick'>按钮</view>
+<view bind:tap='handleBtnClick'>按钮</view>
+<view bind:touchstart='handleStart'>触摸动作开始</view>
+<!-- 事件对象 -->
+<view bindtap='handleEventClick'>事件对象</view>
+<!-- currentTarget 和target的区别 -->
+<view class="outer" id="outer" bindtap="handleouter">
+外层的view
+<view class='inner' id='inner' bindtap="handleinner">
+内层的view
+</view>
+</view>
+<!-- 事件的传递参数 data-  通过事件属性 currentTarget dataset获取-->
+<view wx:for="{{titles}}" wx:key="{{index}}">
+<view bindtap='getEvent' data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+</view>
+<!-- 事件冒泡 事件捕获capture-bind:tap  阻止事件传递 catch-->
+<view class='box3'  capture-bind:tap="handleCapture3" bindtap='handleBind3'>
+<view class='box2'  capture-bind:tap="handleCapture2" bindtap='handleBind2'>
+<view class='box1'  capture-bind:tap="handleCapture1" bindtap='handleBind1'>
+</view>
+</view></view>

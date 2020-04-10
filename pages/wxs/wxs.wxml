@@ -1,0 +1,28 @@
+<!--pages/wxs/wxs.wxml-->
+<text>pages/wxs/wxs.wxml</text>
+<!-- wxs定义方式  可单独抽到一个文件中 -->
+<!-- <wxs module="info">
+//js代码
+var message ="HELLO";
+var name="刘欢";
+function sum(num1,num2){
+return num1+num2
+}
+//commonjs模块化导出
+module.exports={
+message:message,
+name:name,
+sum:sum
+}
+
+
+</wxs> -->
+<!-- 定义在单独的wxs文件中,使用<wxs>标签进行导入 不能使用绝对路径-->
+<wxs src="../../wxs/info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(10,20)}}</view>
+<!-- wxs案例 保留两位小数 -->
+<wxs src="../../wxs/format.wxs" module="format"/>
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.timeFormat(time,'yyyy-MM-dd hh:mm:ss')}}</view>

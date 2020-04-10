@@ -1,1 +1,14 @@
 /* pages/home/home.wxss */
+.press{
+background-color: red;
+color: wheat;
+
+}
+.box{
+  width: 100px;
+  height:100px;
+  background:red;
+}
+.hoverbox{
+background: black;
+}

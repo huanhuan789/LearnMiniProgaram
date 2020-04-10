@@ -1,0 +1,7 @@
+/* pages/wxml语法/wxml.wxss */
+.box{
+  font-size: 50px;
+}
+.active{
+  color: red;
+}
