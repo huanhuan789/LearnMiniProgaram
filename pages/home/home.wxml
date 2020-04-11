@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<!-- 展示弹窗 -->
+<button bindtap='handleShowToast'>弹窗1</button>
+<button bindtap='handleShowModal'>弹窗2</button>
+<button bindtap='handleShowLoding'>弹窗3</button>
+<button bindtap='handleShowAction'>弹窗4</button>
+<!-- 小程序中使用分享 -->
+<button open-type='share'>分享</button>
