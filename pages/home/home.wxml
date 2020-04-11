@@ -1,2 +1,17 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+<!-- navigator页面跳转-->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+<!-- open-type属性 -->
+<!--  关闭当前页面 跳转到应用内的某个页面 不能跳到tabbar  不能返回 -->
+<navigator url="/pages/detail/detail" open-type='redirect'>跳到详情页</navigator>
+<!-- 跳到tabbar 并关闭其他所有不是tabBar页面-->
+<navigator url="/pages/about/about" open-type='switchTab'>跳到关于页</navigator>
+<!-- 其他页面关闭 -->
+<navigator url="/pages/about/about" open-type='reLaunch'>跳到关于页</navigator>
+<!-- 跳转过程传递数据 -->
+<navigator url="/pages/detail/detail?name=why&ege=18" >跳到关于页</navigator>
+<!-- 跳转页面后 首页的数据改变 可在跳转页的unload修改-->
+<view>{{title}}</view>
+<!-- ----------通过代码进行跳转 -->
+<button bindtap="handleClick">跳转</button>

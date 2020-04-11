@@ -1,23 +1,18 @@
-// pages/home/home.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈哈'
-  },
-  handleClick(){
-    wx.navigateTo({
-      url: '/pages/detail/detail?title=nihao',
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -44,7 +39,18 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
+  // 页面退出后改变跳转页数据的值
   onUnload: function () {
+// 1.获取跳转页对象getCurrentPages当前所有栈的对象
+const pages=getCurrentPages()
+// 拿到跳转页
+const home =pages[pages.length-2]
+// 2.调用跳转页面的方法
+home.setData({
+  title:'呵呵呵'
+})
+
+
 
   },
 
